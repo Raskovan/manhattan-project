@@ -1,0 +1,654 @@
+@CHARSET "ISO-8859-1";
+/* Reset CSS
+ * --------------------------------------- */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,
+form,fieldset,input,textarea,p,blockquote,th,td {
+    padding: 0;
+    margin: 0;
+}
+a{
+	text-decoration:none;
+}
+table {
+    border-spacing: 0;
+}
+fieldset,img {
+    border: 0;
+}
+address,caption,cite,code,dfn,em,strong,th,var {
+    font-weight: normal;
+    font-style: normal;
+}
+strong{
+	font-weight: bold;
+}
+ol,ul {
+    list-style: none;
+    margin:0;
+    padding:0;
+}
+caption,th {
+    text-align: left;
+
+}
+h1,h2,h3,h4,h5,h6 {
+    font-weight: normal;
+    font-size: 100%;
+    margin:0;
+    padding:0;
+    color:#444;
+}
+q:before,q:after {
+    content:'';
+}
+abbr,acronym { border: 0;
+}
+
+	/* Overwriting styles for the navigation dots (to place it where we want)
+	* --------------------------------------- */
+	.fp-slidesNav.bottom{
+		bottom: 25px;
+	}
+
+
+	/* Centered texts in each section
+	* ---------------------------------------
+	.section{
+		text-align:center;
+	} */
+
+
+	/* Backgrounds will cover all the section
+	* --------------------------------------- */
+	.section{
+		background-size: 100% 30%, cover;
+
+	}
+
+
+	.slide{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+	}
+
+	/* Defining each section background and styles
+	* --------------------------------------- */
+	#section0{
+		/*background-image: linear-gradient(white, white), url(imgs/bg5.jpg);
+        background-repeat: no-repeat, no-repeat;
+        background-position: bottom;*/
+	}
+	#section0 h1{
+		background: linear-gradient(135deg, rgba(188,255,255,0.3), rgba(255,255,122,0.2), rgba(255,122,188,0.2));
+        top: 50%;
+		transform: translateY(-50%);
+		position: relative;
+	}
+
+    #section1{
+		background: linear-gradient(135deg, rgba(188,255,255,0.1), rgba(255,255,122,0.1), rgba(255,122,188,0.1));
+        display: flex;
+        align-items: center;
+        justify-content: center;
+	}
+
+	#section2{
+		background: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+	}
+	#section3{
+		background: linear-gradient(135deg, rgba(188,255,255,0.3), rgba(255,255,122,0.2), rgba(255,122,188,0.2));
+        display: flex;
+        align-items: center;
+        justify-content: center;
+}
+	#section3 h1{
+		color: #000;
+	}
+
+    #section4{
+		background-image: url(imgs/skyline.svg), linear-gradient(white, white);
+        background-size: 100%, cover;
+        background-repeat: no-repeat, no-repeat;
+        background-position: bottom;
+        display: -webkit-flex;
+        align-items: center;
+        justify-content: center;
+	}
+
+
+	/*Adding background for the slides
+	* --------------------------------------- */
+	#slide1{
+
+}
+	#slide2{
+
+	}
+
+    #slide3{
+
+	}
+
+    #slide4{
+
+	}
+
+
+
+/* Custom CSS
+ * --------------------------------------- */
+
+
+
+body{
+	font-family: 'Josefin Sans', sans-serif;
+	color: #333;
+    margin: 10%;
+        -webkit-font-smoothing: antialiased;
+
+}
+.wrap{
+	margin-left: auto;
+	margin-right: auto;
+	width: 960px;
+	position: relative;
+}
+h1{
+	font-size: 2em;
+    margin-bottom: 50px;
+}
+
+h2{
+	font-size: 2em;
+    margin-bottom: 50px;
+}
+
+p{
+	font-size: 2em;
+}
+.intro p{
+	width: 60%;
+	margin: 0 auto;
+	font-size: 1.3em;
+    font-family: 'Goudy Bookletter 1911', serif;
+    text-align: left;
+}
+
+.intro {
+    width: 90%;
+}
+
+.section{
+	text-align:center;
+}
+
+.imgslider {
+    width: 60%
+}
+
+
+
+.mplogo {
+    display: flex;
+    height: 60px;
+    position: fixed;
+	z-index: 70;
+    align-items: center;
+    width: 50%;
+    padding: 0 0 0 40px;
+}
+
+.mplogo img{
+    width: 100%;
+}
+
+/* MENU */
+
+.menu li {
+  display: inline-block;
+margin: 15px 20px 0 0;
+  color: #000;
+  /*background:#fff;*/
+  /*background: rgba(255,255,255, 0.5);*/
+  /*-webkit-border-radius: 10px;
+            border-radius: 10px;*/
+}
+
+
+.menu li:last-child {
+  margin-right: 5%;
+  color: #000;
+  /*background:#fff;*/
+  /*background: rgba(255,255,255, 0.5);*/
+  /*-webkit-border-radius: 10px;
+            border-radius: 10px;*/
+}
+
+.menu li:hover{
+    text-decoration: none;
+    border-bottom: 1px solid #333;
+}
+
+
+
+.menu ul.selected a{
+    text-decoration: none;
+    border-bottom: 0;
+}
+
+.menu li a {
+  text-decoration:none;
+  color: #000;
+  padding: 10px 10px 10px 10px;
+  display:block;
+
+}
+
+.menu li.active a{
+    border-bottom: 2px solid #c30000;
+}
+
+.menu li.active:hover{
+    border-bottom: 0;
+}
+
+.menu{
+  background: rgba(0,0,0, 0.05);
+  position:fixed;
+  top:0;
+  z-index: 1;
+  width: 100%;
+  padding: 10px 10px 20px 10px;
+
+}
+
+.menu ul {
+    text-align: right;
+}
+
+/* MENU TOGGLE*/
+
+.toggle-nav {
+    display: none;
+    color:#4a4a4a;
+    text-align: right;
+}
+
+/* FIRST PAGE BOTTOM SECTION*/
+
+.roundedImg {
+    width: 60%;
+    border-radius: 90%;
+}
+.roundedImgOle {
+    width: 60%;
+    border-radius: 90%;
+}
+
+.topPart{
+    height: 70%;
+    background-image: url(imgs/bg5.jpg);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+}
+
+.bottomPart{
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 30%;
+    background: white;
+    align-items: center
+}
+
+div.bottomLeft{
+    float: left;
+    width: 25%;
+}
+
+div.bottomRight{
+    float: right;
+    width: 25%;
+}
+
+div.bottomCenter{
+    font-size: 2.5em;
+    float: left;
+    width: 50%;
+    line-height: 1.3em;
+}
+
+/* TEXT */
+
+div.bodyText{
+	margin: 0 auto;
+	font-size: 1.3em;
+    font-family: 'Mate', serif;
+    text-align: left;
+    line-height: 1.5em;
+    -webkit-font-smoothing: antialiased;
+}
+
+.bodyText a {
+    color: #333;
+    text-decoration: none;
+    border-bottom: 1px solid #333;
+}
+
+.bodyText a:hover {
+    color: black;
+    text-decoration: none;
+    border-bottom: 2px solid #c30000;
+}
+
+/* SIGN UP */
+
+.signupform{
+    margin: 0 auto;
+    width: 40%;
+    background: white;
+    padding: 30px 30px 30px 30px;
+    box-shadow: 1px 1px 10px #bfbfbf;
+}
+
+input[type=text], input[type=email] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-size: 1em;
+}
+
+button {
+    background-color: #a9aaa9;
+    color: white;
+    padding: 12px 20px;
+    margin: 20px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1em;
+}
+
+#links {
+    margin: 10px 0 0 0;
+}
+
+#links li{
+    display:inline-block;
+	margin: 30px 20px 0 0;
+}
+
+#links img{
+    width: 60%;
+}
+
+
+/* ---- */
+
+p.captions{
+    margin-top: 5px;
+    font-size: 1.1em;
+    line-height: 1.2em;
+    font-family: 'Mate', serif;
+
+}
+
+.footer {
+    position: absolute;
+  	bottom: 0;
+    width: 100%;
+    height: 30px;
+  	z-index: 1;
+  	padding: 0px;
+    text-align: center;
+}
+
+.footer a:link {
+  color: #333;
+}
+
+.donationsbox{
+    margin: 0 auto;
+    width: 35%;
+    background: white;
+    padding: 30px 30px 30px 30px;
+    box-shadow: 1px 1px 10px #bfbfbf;
+    text-align: center;
+    color: red;
+}
+
+p.dontilda {
+    text-align: center;
+    font-size: 2em;
+    line-height: 1em;
+}
+
+.donationtext {
+    padding: 10px;
+    font-size: 1.8em;
+    color: black;
+    line-height: 1em;
+}
+
+.donationtext a {
+    color: red;
+    text-decoration: none;
+}
+
+.donationtext a:hover {
+    color: black;
+    text-decoration: none;
+    border-bottom: 2px solid #c30000;
+}
+
+div.cancel a {
+  font-size: 0.5em;
+  color: grey;
+  text-decoration: none;
+}
+
+div.fbbutton {
+    padding-top: 30px;
+    padding-right: 10px;
+}
+
+/*----- Responsive -----*/
+
+
+
+@media screen and (max-width: 980px) {
+
+
+    .donationsbox{
+    margin: 0 auto;
+    width: 80%;
+    background: white;
+    padding: 30px 30px 30px 30px;
+    box-shadow: 1px 1px 10px #bfbfbf;
+    text-align: center;
+    color: red;
+}
+
+    .donationtext {
+    padding: 10px;
+    font-size: 2.8em;
+    color: black;
+    line-height: 1em;
+}
+
+
+    .menu ul.visible {
+        display:none;
+    }
+
+    .menu ul {
+        width:100%;
+        top:0%;
+        font-size: 1.8em;
+        text-align: center;
+        line-height: 1em;
+    }
+
+    .menu li {
+        display:block;
+        margin: 15px 20px 0 0px;
+    }
+
+    .menu li.visible{
+        display: none;
+    }
+
+        .menu li.active a{
+        color: #c30000;
+            border-bottom: 0;
+    }
+
+    .menu a {
+        display:block;
+    }
+
+    .toggle-nav {
+        padding:10px 40px 0 0;
+        display:block;
+        font-size:30px;
+    }
+
+    .toggle-nav:hover, .toggle-nav.visible {
+        text-decoration:none;
+        color:#4a4a4a;
+    }
+
+
+
+    .menu li:last-child {
+        margin: 15px 20px 0 0px;
+
+}
+
+
+
+.menu li:hover{
+    text-decoration: none;
+    border-bottom: 0px solid #333;
+}
+
+.mplogo {
+
+    width: 80%;
+}
+
+.mplogo img{
+    width: 130%;
+}
+
+.section{
+    background-size: 100% 60%, cover;
+
+	}
+ .bottomPart{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 60%;
+    background: white;
+
+}
+
+
+div.bottomLeft{
+    padding: 20px 0 20px 0;
+    width: 100%;
+}
+
+.bottomLeft img {
+        width: 30%;
+    }
+
+div.bottomRight{
+    width: 100%;
+    padding: 20px 0 20px 0;
+
+}
+
+.bottomRight img {
+        width: 30%
+    }
+
+div.bottomCenter{
+    font-size: 4em;
+    width: 50%;
+    line-height: 1.2em;
+    width: 100%;
+}
+
+
+/* SIGN UP */
+
+.signupform{
+    width: 80%;
+}
+
+input[type=text], input[type=email] {
+    font-size: 2em;
+}
+
+button {
+    font-size: 2em;
+}
+
+
+
+#links img{
+    width: 80%;
+}
+
+    h2 {
+        display: none;
+    }
+
+        h1 {
+font-size: 3em;    }
+
+
+/* ---- */
+
+    div.bodyText{
+    width: 96%;
+
+	font-size: 1.9em;
+
+
+    line-height: 1.3em;
+
+}
+
+    .imgslider {
+    width: 100%
+}
+
+    .intro p{
+	width: 100%;
+
+}
+
+    p.captions{
+
+    font-size: 1.8em;
+    line-height: 1.6em;
+
+
+}
+
+}
